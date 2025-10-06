@@ -18,8 +18,10 @@ export default {
   data() {
     return {
       url: "",
+      auth: "",
       isMobile: false,
       objIDs: [],
+      type: null,
       assigned: {
         name: "",
         position: "",
@@ -169,11 +171,20 @@ export default {
     async getObjs() {
       try {
         this.items = [];
-        console.log("getObj");
-        const objData = await axios.get(
-          "https://lissearch.ru/backend/api/api.php",
-          { params: { params: "getObject", id: this.objIDs } }
+        console.log(this.objIDs, "getObj");
+        let formData = new FormData();
+        for (const index in this.objIDs) {
+          console.log({ index });
+          console.log(this.objIDs[index]);
+          formData.append(`id[${index}]`, this.objIDs[index]);
+        }
+        formData.append(`params`, "getSelection");
+
+        const objData = await axios.post(
+          "https://lissearch.ru/backend/selection/",
+          formData
         );
+        console.log({ objData });
         for (const item of objData.data) {
           console.log({ item });
           this.assigned = {
@@ -183,13 +194,7 @@ export default {
             phone: "+79137921801",
             email: "ee.arzikaev@ya.ru",
           }; //item[0]
-          const residence = await axios.get(
-            "https://spa-bitrix.ru/liss/parser_v2/api.php",
-            {
-              params: { params: "getResidenceObject", id: item[0].jk_id },
-            }
-          );
-          console.log({ residence });
+
           const photos = item[0].lot_photo_url.split(";");
           console.log({ photos });
           this.items.push({
@@ -212,7 +217,7 @@ export default {
             ),
             currency: "₽",
             rooms: item[0].lot_bedroom,
-            residense: residence.data[0].jk_name,
+            residense: item.jk_name,
             residenceID: item[0].jk_id,
             street: null,
             square: item[0].lot_square,
