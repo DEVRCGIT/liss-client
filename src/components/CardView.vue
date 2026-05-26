@@ -889,9 +889,9 @@ export default {
 }
 
 .saled p {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 500;
-  font-style: Medium;
+  font-family: var(--font-medium-family);
+  font-weight: var(--font-medium-weight);
+  font-style: normal;
   font-size: 14px;
   color: #fff;
   line-height: 40px;
@@ -899,8 +899,8 @@ export default {
   text-align: center;
 }
 .description__text {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
+  font-family: var(--font-regular-family);
+  font-weight: var(--font-regular-weight);
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0px;
@@ -959,8 +959,8 @@ main {
 
 .btn-reset span {
   color: #ffffff;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
+  font-family: var(--font-regular-family);
+  font-weight: var(--font-regular-weight);
 
   font-size: 0.92857rem !important;
   line-height: 24px;
@@ -976,9 +976,9 @@ main {
   gap: 25px;
 }
 .description__address {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 500;
-  font-style: Medium;
+  font-family: var(--font-medium-family);
+  font-weight: var(--font-medium-weight);
+  font-style: normal;
   font-size: 16px;
   color: #474849;
   line-height: 24px;
@@ -1023,8 +1023,8 @@ main {
   gap: 15px;
 }
 .characteristics-item span {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
+  font-family: var(--font-regular-family);
+  font-weight: var(--font-regular-weight);
   font-size: 16px;
   line-height: 18px;
   letter-spacing: 0px;
@@ -1073,8 +1073,8 @@ main {
 }
 .price {
   color: #ff6624;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
+  font-family: var(--font-regular-family);
+  font-weight: var(--font-regular-weight);
 
   font-size: 18px;
 
@@ -1092,8 +1092,8 @@ main {
   background-color: #ff8152;
   border-radius: 13px;
   color: #ffffff;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 500;
+  font-family: var(--font-medium-family);
+  font-weight: var(--font-medium-weight);
   font-size: 14px;
   position: relative;
   text-align: center;
@@ -1112,8 +1112,8 @@ main {
 
 .clip span {
   color: white;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 500;
+  font-family: var(--font-medium-family);
+  font-weight: var(--font-medium-weight);
   font-size: 12px;
   line-height: 23px;
   padding: 0 10px;
@@ -1145,8 +1145,8 @@ main {
 .marker span {
   font-size: 10px;
   color: #ffffff;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 500;
+  font-family: var(--font-medium-family);
+  font-weight: var(--font-medium-weight);
   width: 21px;
   height: 21px;
   display: grid;
@@ -1185,8 +1185,8 @@ header {
 }
 
 .navbar__link {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 500;
+  font-family: var(--font-medium-family);
+  font-weight: var(--font-medium-weight);
   font-style: normal;
   font-size: 0.92857rem !important;
   text-transform: uppercase;
@@ -1226,8 +1226,8 @@ header {
 }
 
 .banner__title h1 {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 600;
+  font-family: var(--font-semibold-family);
+  font-weight: var(--font-semibold-weight);
   font-style: normal;
   /* text-transform: uppercase; */
   color: #ffffff;
@@ -1239,8 +1239,8 @@ header {
 
 .banner__description p {
   color: #ffffff;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
+  font-family: var(--font-regular-family);
+  font-weight: var(--font-regular-weight);
   font-style: normal;
   /* font-size: 1.21429rem; */
   font-size: 32px;
@@ -1257,8 +1257,8 @@ header {
 
 .title {
   color: #474849;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 600;
+  font-family: var(--font-semibold-family);
+  font-weight: var(--font-semibold-weight);
   font-style: normal;
   line-height: 40px;
   font-size: 32px;
@@ -1294,8 +1294,8 @@ header {
   width: 50%;
 }
 .apartments__details-title {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
+  font-family: var(--font-bold-family);
+  font-weight: var(--font-bold-weight);
   font-style: normal;
   line-height: 1.4;
   color: #111111;
@@ -1305,8 +1305,8 @@ header {
 .apartments__details-description {
   color: #6c7072;
   font-size: 1.21429rem;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
+  font-family: var(--font-regular-family);
+  font-weight: var(--font-regular-weight);
   font-style: normal;
   line-height: 1.6;
 
@@ -1324,8 +1324,8 @@ header {
 }
 .apartments__icon-description {
   color: #6c7072;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
+  font-family: var(--font-regular-family);
+  font-weight: var(--font-regular-weight);
   font-style: normal;
   font-size: 1.21429rem;
 }
@@ -1356,8 +1356,8 @@ header {
 }
 .object__information-description {
   color: #6c7072;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
+  font-family: var(--font-regular-family);
+  font-weight: var(--font-regular-weight);
   font-style: normal;
   font-size: 1.14286rem;
   line-height: 1.6;
@@ -1375,8 +1375,8 @@ header {
 .contacts__title {
   text-align: left;
   color: #263c44;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 600;
+  font-family: var(--font-semibold-family);
+  font-weight: var(--font-semibold-weight);
   font-style: normal;
   font-size: 2rem;
   line-height: 1.4;
@@ -1397,15 +1397,15 @@ header {
 }
 .contacts__sub-name {
   text-align: left;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
+  font-family: var(--font-regular-family);
+  font-weight: var(--font-regular-weight);
   font-style: normal;
   color: #263c44;
   font-size: 1.14286rem;
 }
 .contacts__phone-details a {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
+  font-family: var(--font-regular-family);
+  font-weight: var(--font-regular-weight);
   font-style: normal;
   color: #263c44;
   font-size: 1.21429rem;
@@ -1428,8 +1428,8 @@ footer {
   gap: 30px;
 }
 .footer-section__copyright {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
+  font-family: var(--font-regular-family);
+  font-weight: var(--font-regular-weight);
   font-style: normal;
   color: #474849;
   line-height: 1.6;

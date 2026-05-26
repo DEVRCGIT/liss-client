@@ -32,11 +32,113 @@ img {
   height: 50px;
 }
 
-body {
-  min-width: 320px;
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
+/* --- Шрифты ---
+ * Семантические роли: regular / medium / semibold / bold.
+ * При смене темы (кнопка в шапке) меняются все роли сразу.
+ * В компонентах: var(--font-semibold-family) + var(--font-semibold-weight)
+ * или классы .font-regular, .font-medium, .font-semibold, .font-bold
+ */
+@font-face {
+  font-family: "SF UI Display";
+  src: url("../assets/fonts/ofont.ru_SF UI Display.ttf") format("truetype");
   font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF UI Display Medium";
+  src: url("../assets/fonts/sf-ui-display-medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF UI Display Semibold";
+  src: url("../assets/fonts/sf-ui-display-semibold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --font-regular-family: "SF UI Display", sans-serif;
+  --font-regular-weight: 400;
+  --font-medium-family: "SF UI Display Medium", sans-serif;
+  --font-medium-weight: normal;
+  --font-semibold-family: "SF UI Display Semibold", sans-serif;
+  --font-semibold-weight: normal;
+  --font-bold-family: "SF UI Display Semibold", sans-serif;
+  --font-bold-weight: normal;
+
+  --font-family-base: var(--font-regular-family);
+  --font-family-heading: var(--font-semibold-family);
+}
+
+html[data-font="roboto"] {
+  --font-regular-family: "Roboto", sans-serif;
+  --font-regular-weight: 400;
+  --font-medium-family: "Roboto", sans-serif;
+  --font-medium-weight: 500;
+  --font-semibold-family: "Roboto", sans-serif;
+  --font-semibold-weight: 600;
+  --font-bold-family: "Roboto", sans-serif;
+  --font-bold-weight: 700;
+}
+
+html[data-font="sf-ui"] {
+  --font-regular-family: "SF UI Display", sans-serif;
+  --font-regular-weight: 400;
+  --font-medium-family: "SF UI Display Medium", sans-serif;
+  --font-medium-weight: normal;
+  --font-semibold-family: "SF UI Display Semibold", sans-serif;
+  --font-semibold-weight: normal;
+  --font-bold-family: "SF UI Display Semibold", sans-serif;
+  --font-bold-weight: normal;
+}
+
+html[data-font="montserrat"] {
+  --font-regular-family: "Montserrat", sans-serif;
+  --font-regular-weight: 400;
+  --font-medium-family: "Montserrat", sans-serif;
+  --font-medium-weight: 500;
+  --font-semibold-family: "Montserrat", sans-serif;
+  --font-semibold-weight: 600;
+  --font-bold-family: "Montserrat", sans-serif;
+  --font-bold-weight: 700;
+}
+
+.font-regular {
+  font-family: var(--font-regular-family);
+  font-weight: var(--font-regular-weight);
+  font-style: normal;
+}
+
+.font-medium {
+  font-family: var(--font-medium-family);
+  font-weight: var(--font-medium-weight);
+  font-style: normal;
+}
+
+.font-semibold {
+  font-family: var(--font-semibold-family);
+  font-weight: var(--font-semibold-weight);
+  font-style: normal;
+}
+
+.font-bold {
+  font-family: var(--font-bold-family);
+  font-weight: var(--font-bold-weight);
+  font-style: normal;
+}
+
+body {
+  background-color: #f4f6f9;
+  min-width: 320px;
+  font-family: var(--font-regular-family);
+  font-weight: var(--font-regular-weight);
+  font-style: normal;
   font-size: 14px;
   line-height: 180%;
   color: #414042;
@@ -81,8 +183,9 @@ body {
 }
 
 .title {
+  font-family: var(--font-semibold-family);
+  font-weight: var(--font-semibold-weight);
   font-style: normal;
-  font-weight: 600;
   font-size: 18px;
 }
 
@@ -91,8 +194,9 @@ body {
 }
 
 .bold-text {
+  font-family: var(--font-bold-family);
+  font-weight: var(--font-bold-weight);
   font-style: normal;
-  font-weight: 700;
   font-size: 16px;
 }
 

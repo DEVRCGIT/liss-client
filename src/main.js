@@ -5,10 +5,12 @@ import { createApp } from "vue";
 import App from "./App.vue";
 import vuetify from "./plugins/vuetify";
 import { loadFonts } from "./plugins/webfontloader";
+import { initFontTheme } from "./utils/fontTheme";
 import { createYmaps } from "vue-yandex-maps";
 import router from "./router";
 
 loadFonts();
+initFontTheme();
 
 createApp(App)
   .use(router)
